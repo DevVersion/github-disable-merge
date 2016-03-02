@@ -1,0 +1,19 @@
+{
+    "name": "github-disable-merge",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Permanently disables the evil green inviting merge button.",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*",
+                "http://github.com/*"
+            ],
+            "js": [
+                "./disable-merge.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
+}
